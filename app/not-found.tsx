@@ -4,8 +4,6 @@ import React from "react";
 
 const NotFound = () => {
   return (
-    // Added 'section-wrapper' to match your Navbar and center the whole thing on the screen
-    // Changed 'justify-between' to 'justify-center' or 'items-center' for better vertical flow
     <div className="section-wrapper flex flex-col lg:flex-row items-center justify-between min-h-[80vh] px-4 gap-10">
       {/* LEFT CONTENT */}
       <div className="flex flex-col text-center lg:text-left items-center  min-h-[80vh] lg:items-start justify-center">

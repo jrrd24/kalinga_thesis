@@ -34,7 +34,9 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <Navbar />
-        <main className="grow w-full">{children}</main>
+        <main className="grow w-full text-body-text bg-body-bg">
+          {children}
+        </main>
       </body>
     </html>
   );
