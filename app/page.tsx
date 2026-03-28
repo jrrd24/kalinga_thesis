@@ -18,13 +18,13 @@ const page = () => {
         buttons={[
           {
             text: "Explore Resources",
-            href: "/about",
+            href: "/resources",
             type: "solid",
             showArrow: true,
           },
           {
             text: "Learn More",
-            href: "/resources",
+            href: "/about",
             type: "outline",
           },
         ]}

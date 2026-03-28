@@ -20,7 +20,7 @@ const ArticleCard = ({
   imageUrl,
 }: ArticleCardProps) => {
   return (
-    <div className="group flex flex-col h-full overflow-hidden rounded-2xl bg-white shadow-sm border border-gray-100 transition-all hover:shadow-xl">
+    <div className="group flex flex-col h-full overflow-hidden rounded-2xl bg-white shadow-sm shadow-brand-subtext border border-gray-100 transition-all duration-300 hover:shadow-xl">
       {/* Image Section */}
       <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
         {imageUrl ? (
@@ -40,7 +40,7 @@ const ArticleCard = ({
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col flex-grow p-6">
+      <div className="flex flex-col grow p-6">
         {/* Badge & Date */}
         <div className="flex items-center gap-4 mb-4">
           <span className="rounded-full bg-[#f0f4e1] px-4 py-1 text-sm font-medium text-brand">

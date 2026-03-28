@@ -4,7 +4,7 @@ import React from "react";
 
 const NotFound = () => {
   return (
-    <div className="section-wrapper flex flex-col lg:flex-row items-center justify-between min-h-[80vh] px-4 gap-10">
+    <div className="section-wrapper flex flex-col lg:flex-row items-center justify-between min-h-[calc(100vh-80px)] px-4 gap-10">
       {/* LEFT CONTENT */}
       <div className="flex flex-col text-center lg:text-left items-center  min-h-[80vh] lg:items-start justify-center">
         <h2 className="text-8xl font-bold text-brand mb-4">404</h2>
@@ -31,7 +31,7 @@ const NotFound = () => {
           alt="404 Illustration"
           width={500}
           height={500}
-          className="h-auto w-full max-w-[500px]"
+          className="h-auto w-full max-w-125"
           priority
         />
       </div>
