@@ -62,6 +62,13 @@ const Footer = (props: Props) => {
             </p>
           </FooterColumn>
         </div>
+
+        <hr className="opacity-25" />
+
+        <p className="text-sm md:text-base text-brand-subtext leading-snug text-center">
+          &copy; {new Date().getFullYear()} Local History of Rizal Kalinga.
+          BSED-Social Studies Research Project.
+        </p>
       </div>
     </footer>
   );

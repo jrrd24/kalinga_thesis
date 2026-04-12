@@ -4,7 +4,7 @@ import SiteOverview from "@/components/sections/SiteOverview";
 import SectionWithGrid from "@/components/sections/SectionWithGrid";
 import { resourcesData } from "@/data/resourcesData";
 import { VideoPreviewCard } from "@/components/cards/VideoPreviewCard";
-import { articlesData } from "./../data/articlesData";
+import { articlesData } from "../data/articles/articlesData";
 import ArticleCard from "@/components/cards/ArticleCard";
 import CallToAction from "@/components/cards/CallToAction";
 

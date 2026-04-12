@@ -57,7 +57,9 @@ const ArticleCard = ({
           <h3 className="text-xl font-bold leading-tight text-body-text group-hover:text-brand transition-colors">
             {title}
           </h3>
-          <p className="text-sm leading-relaxed text-gray-600">{description}</p>
+          <p className="text-sm leading-relaxed text-gray-600 line-clamp-4">
+            {description}
+          </p>
         </div>
 
         <div className="mt-auto pt-6">

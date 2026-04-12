@@ -1,3 +1,6 @@
+"use client";
+import { Book, Coins, Map, MapPin, Users } from "lucide-react";
+
 const PopulationTable = () => {
   const data = [
     { id: 1, name: "Babalag East (Pob.)", pop2010: "1,179" },
@@ -163,6 +166,7 @@ export const aboutData = [
         <OfficialsTable />
       </div>
     ),
+    Icon: Book,
   },
   {
     id: "land",
@@ -192,6 +196,7 @@ export const aboutData = [
         </p>
       </div>
     ),
+    Icon: Map,
   },
   {
     id: "inhabitants",
@@ -214,6 +219,7 @@ export const aboutData = [
         </p>
       </div>
     ),
+    Icon: Users,
   },
   {
     id: "economy",
@@ -233,6 +239,7 @@ export const aboutData = [
         </p>
       </div>
     ),
+    Icon: Coins,
   },
   {
     id: "tourist_attraction",
@@ -247,5 +254,6 @@ export const aboutData = [
         <li>Man-Made Lagoon located at Liwan West, Rizal, Kaling</li>
       </ul>
     ),
+    Icon: MapPin,
   },
 ];

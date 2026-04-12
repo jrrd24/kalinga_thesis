@@ -1,9 +1,17 @@
 "use client";
+import { Icon, LucideIcon } from "lucide-react";
 import React, { useState, useEffect } from "react";
-import { aboutData } from "./../../data/aboutData";
 
-const ScrollSection = () => {
-  const [activeSection, setActiveSection] = useState(aboutData[0].id);
+interface ScrollSectionProps {
+  id: string;
+  label: string;
+  title: string;
+  content: React.ReactNode;
+  Icon?: LucideIcon;
+}
+
+const ScrollSection = ({ data }: { data: ScrollSectionProps[] }) => {
+  const [activeSection, setActiveSection] = useState(data[0].id);
 
   useEffect(() => {
     const observerOptions = {
@@ -21,7 +29,7 @@ const ScrollSection = () => {
       });
     }, observerOptions);
 
-    aboutData.forEach((section) => {
+    data.forEach((section) => {
       const el = document.getElementById(section.id);
       if (el) observer.observe(el);
     });
@@ -29,7 +37,7 @@ const ScrollSection = () => {
     // Force 'history' active when at the very top of the page
     const handleScroll = () => {
       if (window.scrollY < 50) {
-        setActiveSection(aboutData[0].id);
+        setActiveSection(data[0].id);
       }
     };
 
@@ -47,7 +55,7 @@ const ScrollSection = () => {
         {/* LEFT SIDE: Sticky Navigation */}
         <aside className="md:w-1/4 h-fit md:sticky md:top-32 py-16 mt-16 mb-60 border-l border-body-subtext/15 hidden md:block">
           <nav className="flex flex-col gap-6 relative">
-            {aboutData.map((section) => (
+            {data.map((section) => (
               <button
                 key={section.id}
                 onClick={() =>
@@ -76,21 +84,30 @@ const ScrollSection = () => {
 
         {/* RIGHT SIDE: Scrollable Content */}
         <div className="md:w-3/4 space-y-24 py-16 md:py-0 md:space-y-[10vh] md:pb-[10vh]">
-          {aboutData.map((section) => (
-            <section
-              key={section.id}
-              id={section.id}
-              className="md:min-h-[60vh] flex flex-col md:pt-40"
-            >
-              <h2 className="text-2xl md:text-4xl font-bold mb-6 text-brand">
-                {section.title}
-              </h2>
-              {/* Change: We now render the section.content directly */}
-              <div className="text-sm md:text-lg leading-loose text-gray-600 max-w-xl">
-                {section.content}
-              </div>
-            </section>
-          ))}
+          {data.map((section) => {
+            const SectionIcon = section?.Icon;
+            return (
+              <section
+                key={section.id}
+                id={section.id}
+                className="md:min-h-[60vh] flex flex-col md:pt-40"
+              >
+                <div className="flex gap-4 items-center mb-6">
+                  {SectionIcon && (
+                    <SectionIcon className="text-brand size-6 md:size-8" />
+                  )}
+                  <h2 className="text-2xl md:text-4xl font-bold  text-brand">
+                    {section.title}
+                  </h2>
+                </div>
+
+                {/* Change: We now render the section.content directly */}
+                <div className="text-sm md:text-lg leading-loose text-gray-600 max-w-2xl">
+                  {section.content}
+                </div>
+              </section>
+            );
+          })}
         </div>
       </div>
     </div>
