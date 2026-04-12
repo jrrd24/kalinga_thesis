@@ -37,7 +37,7 @@ const Hero = ({ title, description, imageUrl }: Props) => {
       )}
 
       {/* Content Container */}
-      <div className="relative z-20 section-wrapper justify-center flex flex-col gap-8 min-h-[50vh]">
+      <div className="relative z-20 section-wrapper justify-center flex flex-col gap-8 h-[50vh] lg:max-h-100 ">
         <header className="flex flex-col items-start gap-4 max-w-2xl">
           <h1 className="text-2xl lg:text-3xl font-bold leading-tight drop-shadow-lg">
             {title}

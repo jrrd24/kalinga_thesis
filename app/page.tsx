@@ -30,6 +30,7 @@ const page = () => {
         ]}
       />
       <SiteOverview />
+
       <SectionWithGrid
         title="Featured Videos"
         description=" Watch and learn about Kalinga culture through multimedia
@@ -43,6 +44,7 @@ const page = () => {
             <VideoPreviewCard key={index} {...item} />
           ))}
       </SectionWithGrid>
+
       <SectionWithGrid
         title="Latest Updates"
         sectionWrapperClass="bg-body-bg-alt"

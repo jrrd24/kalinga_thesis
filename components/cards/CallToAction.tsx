@@ -4,7 +4,7 @@ import HeroButton from "../buttons/HeroButton";
 
 const CallToAction = () => {
   return (
-    <section className="section-wrapper py-16">
+    <section className="section-wrapper py-16 w-fit">
       {/* Container with the brand color and rounded corners */}
       <div className="relative overflow-hidden rounded-4xl bg-brand px-6 py-10 text-center text-white shadow-xl">
         <div

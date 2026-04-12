@@ -1,5 +1,1 @@
-export const lifeAtContent = [
-    {
-        
-    }
-]
+export const lifeAtContent = [];
