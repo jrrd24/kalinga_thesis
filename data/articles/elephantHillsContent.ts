@@ -101,10 +101,6 @@ export const elephantHillsContent: ArticleContent[] = [
     imageLocation: "left",
   },
   {
-    type: "sub-section-title",
-    text: "Gallery",
-  },
-  {
     type: "image",
     title: "Gallery",
     imageUrl: [
