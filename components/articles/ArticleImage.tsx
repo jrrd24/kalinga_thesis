@@ -1,6 +1,6 @@
 import React from "react";
 
-type ImageVariant = "gallery" | "side" | "full";
+type ImageVariant = "gallery" | "square" | "full" | "original";
 
 type ArticleImageProps = {
   src: string;
@@ -20,12 +20,15 @@ const ArticleImage = ({
   // Define aspect ratios based on use case
   const aspectRatios = {
     gallery: "aspect-video", // Good for landscape/site shots
-    side: "aspect-square", // Good for vertical fossil/artifact shots
-    full: "aspect-auto", // Natural height
+    square: "aspect-square", // Good for vertical fossil/artifact shots
+    full: "aspect-[3/4]", // Natural height
+    original: "aspect-auto", // Use the image's original dimensions
   };
 
   return (
-    <figure className={`flex flex-col gap-3 max-h-100 ${className}`}>
+    <figure
+      className={`flex flex-col gap-3 ${variant === "full" || variant === "original" ? "" : "max-h-100"}  ${className}`}
+    >
       <div
         className={`relative overflow-hidden rounded-2xl shadow-lg border border-gray-100 ${aspectRatios[variant]}`}
       >
@@ -44,7 +47,7 @@ const ArticleImage = ({
             </span>
           )}
           {source && (
-            <span className="block text-[10px] tracking-wider text-body-subtext/50 mt-1">
+            <span className="block text-[10px] tracking-wider text-body-subtext/50 mt-1 break-all whitespace-normal leading-tight">
               Source: {source}
             </span>
           )}

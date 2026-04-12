@@ -32,7 +32,7 @@ export const elephantHillsContent: ArticleContent[] = [
   {
     type: "paragraph-image",
     text: [
-      "The name “Elephant Hills” was inspired by the discovery of Stegodon luzonensis fossils, an extinct animal similar to an elephant. This animal lived during the Pleistocene Epoch, a time from about 2.6 million to 11,700 years ago, when the Earth experienced the Ice Age.",
+      "The name “Elephant Hills” was inspired by the discovery of **Stegodon luzonensis** fossils, an extinct animal similar to an elephant. This animal lived during the Pleistocene Epoch, a time from about 2.6 million to 11,700 years ago, when the Earth experienced the Ice Age.",
       "These sites yielded stone tools and fossils of extinct animals, including stegodons, elephants, rhinos, a large tortoise, and wild pigs. ",
       "Stegodon luzonensis was first identified in 1956 based on a fossil found, making Rizal, Kalinga, an important site where evidence of this extinct animal was discovered.",
       "Fossilized remains from the Elephant Hills area include bones, teeth, and other skeletal fragments of Stegodon luzonensis. These remains help to paint a picture of the prehistoric environment in which these large animals lived.",
@@ -71,8 +71,8 @@ export const elephantHillsContent: ArticleContent[] = [
     type: "paragraph-image",
     text: [
       "The fossilized remains of a giant rhinoceros (Rhinoceros philippinensis) were unearthed at the archaeological site in Rizal, Kalinga. This skeleton showed cut marks and signs of butchery, meaning early humans used tools on it.",
-      "The rhino bones show cut marks on ribs and percussion marks on limbs, indicating meat and marrow extraction. These marks are clear signs that the animal was butchered with sharp stone tools.",
-      "The rhino bones and tools were found in a clay‑rich layer dated to between 777,000 and 631,000 years ago. The best age estimate for the site is around 709,000 years old.",
+      "The rhino bones show **cut marks on ribs and percussion marks on limbs**, indicating meat and marrow extraction. These marks are clear signs that the animal was butchered with sharp stone tools.",
+      "The rhino bones and tools were found in a clay‑rich layer dated to between **777,000 and 631,000 years ago**. The best age estimate for the site is **around 709,000 years old**.",
     ],
     imageUrl: [
       {
@@ -86,7 +86,7 @@ export const elephantHillsContent: ArticleContent[] = [
   {
     type: "paragraph-image",
     text: [
-      "Alongside the rhino skeleton, scientists found 57 stone tools at the site. These tools were likely used to cut meat and break bones for marrow.",
+      "Alongside the rhino skeleton, scientists found **57 stone tools** at the site. These tools were likely used to cut meat and break bones for marrow.",
       "The Kalinga rhinoceros find has become one of the most important archaeological discoveries in Philippine prehistory.",
       "The tooth and four bones of the Rhinoceros Philippinensis, which were analyzed and presented as proof of earliest hominin activity in the country by 709,000 years ago, are on display at the Ayala Reception Hall.",
     ],
