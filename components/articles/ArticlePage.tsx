@@ -12,15 +12,14 @@ type Props = {
   content: ArticleContent[];
 };
 
-type ArticleContent = {
+export type ArticleContent = {
   type:
     | "section-title"
     | "paragraph"
     | "image"
     | "paragraph-image"
     | "sources"
-    | "divider"
-    | "sub-section-title";
+    | "divider";
   text?: string[] | string;
   title?: string;
   imageUrl?: { src: string; caption: string | null; source: string | null }[];

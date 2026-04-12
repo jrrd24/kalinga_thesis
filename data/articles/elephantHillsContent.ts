@@ -1,4 +1,6 @@
-export const elephantHillsContent = [
+import { ArticleContent } from "@/components/articles/ArticlePage";
+
+export const elephantHillsContent: ArticleContent[] = [
   {
     type: "section-title",
     text: "Elephant Hills",
