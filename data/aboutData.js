@@ -19,10 +19,10 @@ const PopulationTable = () => {
 
   return (
     <div className="overflow-x-auto my-8 border border-white/20 shadow-sm">
-      <table className="w-full border-collapse text-sm md:text-base bg-[#fff9e6] text-body-text">
+      <table className="w-full border-collapse text-sm md:text-base bg-body-bg text-body-text">
         <thead>
           {/* Main Header */}
-          <tr className="bg-brand-secondary text-center font-bold text-brand-text uppercase tracking-wider">
+          <tr className="bg-brand text-center font-bold text-brand-text uppercase tracking-wider">
             <th colSpan={2} className="border border-white p-3">
               Barangay
             </th>
@@ -31,7 +31,7 @@ const PopulationTable = () => {
             </th>
           </tr>
           {/* Years Sub-header */}
-          <tr className="bg-[#e9d1b0] text-center font-semibold">
+          <tr className="bg-brand-secondary text-brand text-center font-semibold">
             <th colSpan={2} className="border border-white p-2"></th>
             <th className="border border-white p-2 w-24">2010</th>
             <th className="border border-white p-2 w-24">2020</th>
@@ -55,7 +55,7 @@ const PopulationTable = () => {
             </tr>
           ))}
           {/* Total Row */}
-          <tr className="bg-[#e9d1b0]/50 font-bold">
+          <tr className="bg-brand  text-brand-text font-bold">
             <td
               colSpan={2}
               className="border border-white p-3 uppercase tracking-tight"
@@ -70,7 +70,7 @@ const PopulationTable = () => {
       </table>
 
       {/* Footer / References */}
-      <div className="p-4 bg-white/50 text-xs italic text-gray-600 border-t border-white/40">
+      <div className="p-4 bg-body-bg text-xs italic text-gray-600 border-t border-white/40">
         <p className="font-bold not-italic mb-1">References:</p>
         <p>
           * - 2010 NSO{" "}
@@ -93,9 +93,9 @@ const OfficialsTable = () => {
 
   return (
     <div className="overflow-hidden my-6 border border-white/20 shadow-sm rounded-sm">
-      <table className="w-full border-collapse text-sm md:text-base text-body-text bg-[#fff9e6]">
+      <table className="w-full border-collapse text-sm md:text-base text-body-text bg-body-bg">
         <thead>
-          <tr className="bg-brand-secondary text-brand-text text-left font-bold uppercase tracking-wider">
+          <tr className="bg-brand text-brand-text text-left font-bold uppercase tracking-wider">
             <th className="border border-white p-3 w-1/3">Period</th>
             <th className="border border-white p-3">Name of Official</th>
           </tr>

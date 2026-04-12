@@ -25,8 +25,8 @@ const Navbar = () => {
   });
 
   return (
-    <nav className="sticky h-20 top-0 z-50 bg-linear-to-r from-brand to-brand-secondary shadow-sm py-2 text-brand-text">
-      <div className="navbar section-wrapper">
+    <nav className="sticky h-20 top-0 z-50 bg-linear-to-r from-brand to-brand-secondary shadow-sm  text-brand-text">
+      <div className="navbar section-wrapper my-auto h-full">
         <div className="flex-1 flex gap-4  items-center">
           {/* MOBILE DROPDOWN */}
           <div className="dropdown lg:hidden">
@@ -60,7 +60,7 @@ const Navbar = () => {
 
           {/* LOGO & TITLE */}
           <div className="flex items-center gap-4">
-            <div className="hidden lg:flex ">
+            <div className=" ">
               {navbarData?.logo ? (
                 <Image
                   src={navbarData?.logo}
@@ -77,11 +77,11 @@ const Navbar = () => {
               <p className="font-semibold text-lg md:text-xl leading-tight">
                 {navbarData?.title}
               </p>
-              {navbarData?.subtitle && (
+              {/* {navbarData?.subtitle && (
                 <p className="text-xs md:text-sm font-medium text-brand-subtext">
                   {navbarData?.subtitle}
                 </p>
-              )}
+              )} */}
             </Link>
           </div>
         </div>

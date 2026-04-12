@@ -45,7 +45,7 @@ const ScrollSection = () => {
     <div className="bg-body-bg-alt">
       <div className="section-wrapper w-full flex flex-col md:flex-row gap-12">
         {/* LEFT SIDE: Sticky Navigation */}
-        <aside className="md:w-1/4 h-fit md:sticky md:top-32 py-20 mt-20 mb-60 border-l border-body-subtext/15 hidden md:block">
+        <aside className="md:w-1/4 h-fit md:sticky md:top-32 py-16 mt-16 mb-60 border-l border-body-subtext/15 hidden md:block">
           <nav className="flex flex-col gap-6 relative">
             {aboutData.map((section) => (
               <button
@@ -75,14 +75,14 @@ const ScrollSection = () => {
         </aside>
 
         {/* RIGHT SIDE: Scrollable Content */}
-        <div className="md:w-3/4 space-y-24 pb-20 md:py-0 md:space-y-[40vh] md:pb-[40vh]">
+        <div className="md:w-3/4 space-y-24 py-16 md:py-0 md:space-y-[10vh] md:pb-[10vh]">
           {aboutData.map((section) => (
             <section
               key={section.id}
               id={section.id}
               className="md:min-h-[60vh] flex flex-col md:pt-40"
             >
-              <h2 className="text-2xl md:text-4xl font-bold mb-6 text-brand-secondary">
+              <h2 className="text-2xl md:text-4xl font-bold mb-6 text-brand">
                 {section.title}
               </h2>
               {/* Change: We now render the section.content directly */}

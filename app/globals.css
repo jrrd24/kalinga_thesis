@@ -2,7 +2,33 @@
 @plugin "daisyui";
 
 @theme {
-    --color-brand: #5B6C2F;
+    /* Brand Colors */
+    --color-brand: #45294C;
+    /* Deep Plum - Primary Identity/Headers */
+    --color-brand-accent: #321d37;
+    /* Darker Plum - Hover states/Active links */
+    --color-brand-secondary: #B0CB9F;
+    /* Sage Green - Buttons/Call-outs */
+    --color-brand-text: #FFFFFF;
+    /* Pure White - Contrast against brand plum */
+    --color-brand-subtext: #D8E9E3;
+    /* Mist Blue-Green - Accents on dark backgrounds */
+
+    /* Body/UI Colors */
+    --color-body-text: #2D312B;
+    /* Dark Olive-Grey - High readability */
+    --color-body-subtext: #5A6354;
+    /* Muted Sage - Captions and metadata */
+    --color-body-bg: #F9FBF9;
+    /* Ghost White - Main background */
+    --color-body-bg-alt: #D8E9E3;
+    /* Mist - Section dividers/Card backgrounds */
+
+    /* Functional Colors */
+    --color-border: #C8DCD5;
+    --color-success: #B0CB9F;
+
+    /* --color-brand: #5B6C2F;
     --color-brand-accent: #3F4B20;
     --color-brand-secondary: #8B732E;
     --color-brand-text: #F7FDE6;
@@ -11,7 +37,7 @@
     --color-body-text: #263238;
     --color-body-subtext: #3F4B20;
     --color-body-bg: #FEFFF8;
-    --color-body-bg-alt: #F7FDE6;
+    --color-body-bg-alt: #F7FDE6; */
 }
 
 .section-wrapper {

@@ -1,7 +1,6 @@
 export const navbarData = {
   logo: "/assets/rizal.png",
-  title: "Local History of Rizal Kalinga",
-  subtitle: "A Thesis Presentation of BSED-Social Studies AY 2025-2026",
+  title: "Rizal, Kalinga",
   sections: [
     {
       title: "Home",
