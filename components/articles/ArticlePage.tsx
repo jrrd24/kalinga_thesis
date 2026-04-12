@@ -6,6 +6,7 @@ import CallToAction from "../cards/CallToAction";
 import SectionWithGrid from "../sections/SectionWithGrid";
 import ArticleCard from "../cards/ArticleCard";
 import renderBlocks from "./RenderBlocks";
+import ArticlesPreview from "./ArticlesPreview";
 
 type Props = {
   id: number;
@@ -58,23 +59,7 @@ const ArticlePage = ({ id, content }: Props) => {
         <div className="flex flex-col gap-16">{renderBlocks(content)}</div>
       </article>
 
-      <SectionWithGrid
-        title="Other Articles"
-        sectionWrapperClass="bg-body-bg-alt"
-      >
-        {articlesData
-          .sort((a, b) => {
-            // Convert string dates to timestamps (milliseconds)
-            const dateA = new Date(a.date).getTime();
-            const dateB = new Date(b.date).getTime();
-
-            return dateB - dateA;
-          })
-          .filter((article) => article.id !== id)
-          .map((item, index) => (
-            <ArticleCard key={index} {...item} />
-          ))}
-      </SectionWithGrid>
+      <ArticlesPreview limit={3} filter={currentArticle?.id} showButton />
 
       <CallToAction />
     </div>

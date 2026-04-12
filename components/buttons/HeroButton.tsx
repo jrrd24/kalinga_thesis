@@ -5,11 +5,16 @@ import React from "react";
 type Props = {
   text: string;
   href: string;
-  type: string;
+  type?: string;
   showArrow?: boolean | undefined;
 };
 
-const HeroButton = ({ text, href, type, showArrow = false }: Props) => {
+const HeroButton = ({
+  text,
+  href,
+  type = "solid",
+  showArrow = false,
+}: Props) => {
   return (
     <Link
       href={href}

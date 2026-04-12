@@ -7,6 +7,7 @@ import { VideoPreviewCard } from "@/components/cards/VideoPreviewCard";
 import { articlesData } from "../data/articles/articlesData";
 import ArticleCard from "@/components/cards/ArticleCard";
 import CallToAction from "@/components/cards/CallToAction";
+import ArticlesPreview from "@/components/articles/ArticlesPreview";
 
 const page = () => {
   return (
@@ -45,22 +46,7 @@ const page = () => {
           ))}
       </SectionWithGrid>
 
-      <SectionWithGrid
-        title="Latest Updates"
-        sectionWrapperClass="bg-body-bg-alt"
-      >
-        {articlesData
-          .sort((a, b) => {
-            // Convert string dates to timestamps (milliseconds)
-            const dateA = new Date(a.date).getTime();
-            const dateB = new Date(b.date).getTime();
-
-            return dateB - dateA;
-          })
-          .map((item, index) => (
-            <ArticleCard key={index} {...item} />
-          ))}
-      </SectionWithGrid>
+      <ArticlesPreview limit={3} showButton />
 
       <CallToAction />
     </div>
