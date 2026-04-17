@@ -1,7 +1,7 @@
 export const articlesData = [
   {
     id: 1,
-    title: "Elephant Hills and Rhinocerus: A Glimpse into Kalinga's Wildlife",
+    title: "Elephant Hills and Rhinoceros: A Glimpse into Kalinga's Wildlife",
     description:
       "Uncover the prehistoric wonders of Kalinga. From the unique geological formations of the Elephant Hills to the world-renowned fossil remains of the ancient rhinoceros, discover why this region is a vital window into Southeast Asia’s ancient wildlife.",
     tags: ["History"],

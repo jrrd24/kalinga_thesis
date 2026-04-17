@@ -59,31 +59,17 @@ const Navbar = () => {
           </div>
 
           {/* LOGO & TITLE */}
-          <div className="flex items-center gap-4">
-            <div className=" ">
-              {navbarData?.logo ? (
-                <Image
-                  src={navbarData?.logo}
-                  alt="logo"
-                  width={50}
-                  height={50}
-                />
-              ) : (
-                <Triangle />
-              )}
-            </div>
+          <Link href="/" className="flex items-center gap-4">
+            {navbarData?.logo ? (
+              <Image src={navbarData?.logo} alt="logo" width={50} height={50} />
+            ) : (
+              <Triangle />
+            )}
 
-            <Link href="/">
-              <p className="font-semibold text-lg md:text-xl leading-tight">
-                {navbarData?.title}
-              </p>
-              {/* {navbarData?.subtitle && (
-                <p className="text-xs md:text-sm font-medium text-brand-subtext">
-                  {navbarData?.subtitle}
-                </p>
-              )} */}
-            </Link>
-          </div>
+            <p className="font-semibold text-lg md:text-xl leading-tight">
+              {navbarData?.title}
+            </p>
+          </Link>
         </div>
 
         {/* DESKTOP LINKS */}

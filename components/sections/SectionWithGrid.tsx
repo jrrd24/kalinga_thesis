@@ -3,7 +3,7 @@ import HeroButton from "../buttons/HeroButton";
 
 type Props = {
   id?: string;
-  title: string;
+  title?: string;
   description?: string;
   gridClass?: string;
   sectionWrapperClass?: string;
@@ -20,7 +20,7 @@ const SectionWithGrid = ({
   children,
   href,
 }: Props) => {
-  const sectionId = id || title.toLowerCase().replace(/\s+/g, "-");
+  const sectionId = id || title?.toLowerCase().replace(/\s+/g, "-");
   return (
     <section
       id={sectionId}
@@ -29,7 +29,11 @@ const SectionWithGrid = ({
       <div className="section-wrapper flex flex-col gap-8 md:gap-12">
         <div className="flex justify-between w-full">
           <div className="flex flex-col items-start gap-1">
-            <h3 className="text-2xl md:text-3xl font-bold">{title}</h3>
+            {title && (
+              <h3 className="text-2xl md:text-3xl font-bold text-brand">
+                {title}
+              </h3>
+            )}
             {description && (
               <p className="text-sm md:text-base text-body-subtext">
                 {description}

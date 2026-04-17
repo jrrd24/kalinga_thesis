@@ -3,85 +3,109 @@ import { Book, Coins, Map, MapPin, Users } from "lucide-react";
 
 const PopulationTable = () => {
   const data = [
-    { id: 1, name: "Babalag East (Pob.)", pop2010: "1,179" },
-    { id: 2, name: "Babalag West (Pob.)", pop2010: "1,851" },
-    { id: 3, name: "Bulbul", pop2010: "750" },
-    { id: 4, name: "Calaocan", pop2010: "1,304" },
-    { id: 5, name: "Kinama", pop2010: "762" },
-    { id: 6, name: "Camarao", pop2010: "" },
-    { id: 7, name: "Liwan East", pop2010: "1,349" },
-    { id: 8, name: "Liwan West", pop2010: "2,490" },
-    { id: 9, name: "Macutay", pop2010: "1,575" },
-    { id: 10, name: "Romualdez", pop2010: "594" },
-    { id: 11, name: "San Francisco", pop2010: "482" },
-    { id: 12, name: "San Pascual", pop2010: "1,190" },
-    { id: 13, name: "San Pedro", pop2010: "497" },
-    { id: 14, name: "San Quintin", pop2010: "532" },
-    { id: 15, name: "Santor", pop2010: "1,387" },
+    { id: 1, name: "Babalag East (Pob.)", pop2020: 1132, pop2015: 1164 },
+    { id: 2, name: "Babalag West (Pob.)", pop2020: 2156, pop2015: 1901 },
+    { id: 3, name: "Bulbol", pop2020: 1109, pop2015: 918 },
+    { id: 4, name: "Calaocan", pop2020: 1503, pop2015: 1278 },
+    { id: 5, name: "Kinama", pop2020: 1056, pop2015: 854 },
+    { id: 7, name: "Liwan East", pop2020: 1504, pop2015: 1412 },
+    { id: 8, name: "Liwan West", pop2020: 3157, pop2015: 2672 },
+    { id: 9, name: "Macutay", pop2020: 1998, pop2015: 1720 },
+    { id: 10, name: "Romualdez", pop2020: 871, pop2015: 665 },
+    { id: 11, name: "San Francisco", pop2020: 711, pop2015: 599 },
+    { id: 12, name: "San Pascual", pop2020: 1329, pop2015: 1194 },
+    { id: 13, name: "San Pedro", pop2020: 785, pop2015: 622 },
+    { id: 14, name: "San Quintin", pop2020: 597, pop2015: 544 },
+    { id: 15, name: "Santor", pop2020: 1646, pop2015: 1495 },
   ];
 
+  // Calculate totals for the bottom row
+  const total2020 = data.reduce((sum, item) => sum + item.pop2020, 0);
+  const total2015 = data.reduce((sum, item) => sum + item.pop2015, 0);
+  const totalChange = ((total2020 - total2015) / total2015) * 100;
+
   return (
-    <div className="overflow-x-auto my-8 border border-white/20 shadow-sm">
+    <div className="overflow-x-auto my-8 border border-white/20 shadow-sm rounded-lg">
       <table className="w-full border-collapse text-sm md:text-base bg-body-bg text-body-text">
         <thead>
-          {/* Main Header */}
           <tr className="bg-brand text-center font-bold text-brand-text uppercase tracking-wider">
             <th colSpan={2} className="border border-white p-3">
               Barangay
             </th>
             <th colSpan={3} className="border border-white p-3">
-              Population*
+              Population Details
             </th>
           </tr>
-          {/* Years Sub-header */}
-          <tr className="bg-brand-secondary text-brand text-center font-semibold">
+          <tr className="bg-brand-secondary text-white text-center font-semibold">
             <th colSpan={2} className="border border-white p-2"></th>
-            <th className="border border-white p-2 w-24">2010</th>
-            <th className="border border-white p-2 w-24">2020</th>
-            <th className="border border-white p-2 w-24"></th>
+            <th className="border border-white p-2 w-28">2020</th>
+            <th className="border border-white p-2 w-28">2015</th>
+            <th className="border border-white p-2 w-28 text-xs md:text-sm">
+              Change 2020-2015 (%)
+            </th>
           </tr>
         </thead>
         <tbody>
-          {data.map((item) => (
-            <tr key={item.id} className="hover:bg-black/5 transition-colors">
-              <td className="border border-white p-2 w-10 text-gray-500">
-                {item.id}
-              </td>
-              <td className="border border-white p-2 font-medium ">
-                {item.name}
-              </td>
-              <td className="border border-white p-2 text-center font-bold ">
-                {item.pop2010}
-              </td>
-              <td className="border border-white p-2"></td>
-              <td className="border border-white p-2"></td>
-            </tr>
-          ))}
+          {data.map((item) => {
+            const change = ((item.pop2020 - item.pop2015) / item.pop2015) * 100;
+            const isIncrease = change > 0;
+
+            return (
+              <tr key={item.id} className="hover:bg-black/5 transition-colors">
+                <td className="border border-white p-2 w-10 text-gray-400 text-xs">
+                  {item.id}
+                </td>
+                <td className="border border-white p-2 font-medium text-gray-800">
+                  {item.name}
+                </td>
+                <td className="border border-white p-2 font-bold text-brand">
+                  {item.pop2020.toLocaleString()}
+                </td>
+                <td className="border border-white p-2 text-gray-600">
+                  {item.pop2015.toLocaleString()}
+                </td>
+                <td
+                  className={`border border-white p-2 font-bold text-xs md:text-sm ${
+                    isIncrease ? "text-emerald-600" : "text-red-500"
+                  }`}
+                >
+                  {isIncrease ? "+" : ""}
+                  {change.toFixed(2)}%
+                </td>
+              </tr>
+            );
+          })}
+
           {/* Total Row */}
-          <tr className="bg-brand  text-brand-text font-bold">
+          <tr className="bg-brand text-brand-text font-bold">
             <td
               colSpan={2}
-              className="border border-white p-3 uppercase tracking-tight"
+              className="border border-white p-3 uppercase tracking-tight text-center"
             >
               Total
             </td>
-            <td className="border border-white p-3"></td>
-            <td className="border border-white p-3"></td>
-            <td className="border border-white p-3"></td>
+            <td className="border border-white p-3 text-center">
+              {total2020.toLocaleString()}
+            </td>
+            <td className="border border-white p-3 text-center">
+              {total2015.toLocaleString()}
+            </td>
+            <td
+              className={`border border-white p-3 text-center ${totalChange > 0 ? "text-emerald-300" : "text-red-300"}`}
+            >
+              {totalChange > 0 ? "+" : ""}
+              {totalChange.toFixed(2)}%
+            </td>
           </tr>
         </tbody>
       </table>
 
       {/* Footer / References */}
       <div className="p-4 bg-body-bg text-xs italic text-gray-600 border-t border-white/40">
-        <p className="font-bold not-italic mb-1">References:</p>
-        <p>
-          * - 2010 NSO{" "}
-          <span className="underline text-blue-600 cursor-pointer">
-            Census of Population
-          </span>
+        <p className="font-bold not-italic mb-1 text-brand">References:</p>
+        <p className="hover:text-brand-secondary cursor-pointer">
+          https://www.philatlas.com/luzon/car/kalinga/rizal.html
         </p>
-        <p>** - 2010 Partial Data from COMELEC</p>
       </div>
     </div>
   );
@@ -95,7 +119,7 @@ const OfficialsTable = () => {
   ];
 
   return (
-    <div className="overflow-hidden my-6 border border-white/20 shadow-sm rounded-sm">
+    <div className="overflow-hidden my-6 border border-white/20 shadow-sm rounded-lg">
       <table className="w-full border-collapse text-sm md:text-base text-body-text bg-body-bg">
         <thead>
           <tr className="bg-brand text-brand-text text-left font-bold uppercase tracking-wider">

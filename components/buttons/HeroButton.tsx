@@ -18,7 +18,7 @@ const HeroButton = ({
   return (
     <Link
       href={href}
-      className={`flex items-center justify-center gap-2 transition-all duration-300 ease-in-out
+      className={`flex items-center justify-center gap-2 transition-all duration-300 ease-in-out rounded-full
     ${
       type === "solid"
         ? "btn btn-primary bg-white text-body-text hover:bg-brand-subtext border-0"

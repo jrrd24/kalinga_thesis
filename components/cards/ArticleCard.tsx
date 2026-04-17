@@ -54,10 +54,10 @@ const ArticleCard = ({
 
         {/* Title & Description */}
         <div className="space-y-2">
-          <h3 className="text-xl font-bold leading-tight text-body-text group-hover:text-brand transition-colors">
+          <h3 className="text-xl line-clamp-2 font-bold leading-tight text-body-text group-hover:text-brand transition-colors">
             {title}
           </h3>
-          <p className="text-sm leading-relaxed text-gray-600 line-clamp-4">
+          <p className="text-sm leading-relaxed text-gray-600 line-clamp-3">
             {description}
           </p>
         </div>

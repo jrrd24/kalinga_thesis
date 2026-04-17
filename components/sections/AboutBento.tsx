@@ -1,4 +1,5 @@
 import React from "react";
+import PageHeader from "./PageHeader";
 
 const BENTO_ITEMS = [
   {
@@ -44,13 +45,10 @@ const BENTO_ITEMS = [
 const AboutBento = () => {
   return (
     <div className="section-wrapper py-16 flex flex-col gap-8 w-full">
-      <header className="flex flex-col items-start gap-1">
-        <h3 className="text-2xl lg:text-3xl font-bold">About Rizal, Kalinga</h3>
-        <p className="text-sm lg:text-base text-body-subtext">
-          Discover the rich heritage, indigenous culture, and enduring
-          traditions that define the people of Rizal, Kalinga.
-        </p>
-      </header>
+      <PageHeader
+        title="About Rizal, Kalinga"
+        description="Discover the rich heritage, indigenous culture, and enduring traditions that define the people of Rizal, Kalinga."
+      />
 
       {/* Changed lg:grid-cols-3 to md:grid-cols-3 and added md:grid-rows-2 */}
       <div className="grid gap-4 md:grid-cols-3 md:grid-rows-2">
