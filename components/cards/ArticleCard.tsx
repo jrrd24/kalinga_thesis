@@ -7,7 +7,7 @@ interface ArticleCardProps {
   description: string;
   tags: string[];
   link: string;
-  date: string;
+  date?: string;
   imageUrl?: string;
 }
 
@@ -42,14 +42,21 @@ const ArticleCard = ({
       {/* Content Section */}
       <div className="flex flex-col grow p-6">
         {/* Badge & Date */}
-        <div className="flex items-center gap-4 mb-4">
-          <span className="rounded-full bg-[#f0f4e1] px-4 py-1 text-sm font-medium text-brand">
-            {tags[0]}
-          </span>
-          <div className="flex items-center gap-1.5 text-sm text-gray-500 font-medium">
-            <Calendar size={16} className="text-brand" />
-            <span>{date}</span>
-          </div>
+        <div className="flex items-center gap-2 mb-4">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              className="rounded-full bg-[#f0f4e1] px-4 py-1 text-sm font-medium text-brand"
+            >
+              {tag}
+            </span>
+          ))}
+          {/* {date && (
+            <div className="flex items-center gap-1.5 text-sm text-gray-500 font-medium">
+              <Calendar size={16} className="text-brand" />
+              <span>{date}</span>
+            </div>
+          )} */}
         </div>
 
         {/* Title & Description */}

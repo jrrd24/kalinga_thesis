@@ -9,7 +9,7 @@ const renderBlocks = (blocks: ArticleContent[]) => {
         return (
           <h2
             key={index}
-            className="text-2xl font-bold text-brand-secondary underline mt-4"
+            className="text-2xl font-bold text-brand underline mt-4"
           >
             {block.text}
           </h2>
@@ -17,7 +17,7 @@ const renderBlocks = (blocks: ArticleContent[]) => {
 
       case "sub-section-title":
         return (
-          <h3 key={index} className="text-xl font-bold text-brand">
+          <h3 key={index} className="text-xl font-bold text-brand-secondary">
             {block.text}
           </h3>
         );
@@ -173,7 +173,7 @@ const renderBlocks = (blocks: ArticleContent[]) => {
                           target="_blank"
                           rel="noopener noreferrer"
                           // Changed to block to remove flex-shink issues
-                          className="block px-4 py-3 rounded-xl border border-transparent hover:bg-brand/5 transition-colors overflow-hidden"
+                          className="block py-2 px-4 rounded-xl border border-transparent hover:bg-brand/5 transition-colors overflow-hidden"
                         >
                           <div className="w-full">
                             <span className="text-sm font-medium text-brand break-all whitespace-normal block leading-normal">

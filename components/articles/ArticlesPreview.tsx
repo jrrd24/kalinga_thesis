@@ -13,7 +13,7 @@ type Props = {
 const ArticlesPreview = ({ limit, showButton, filter }: Props) => {
   const sortedArticles = [...articlesData]
     .filter((article) => article.id !== filter)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    .sort((a, b) => a.order - b.order);
 
   // If limit is provided, take a slice; otherwise, use the whole sorted array
   const displayedArticles = limit

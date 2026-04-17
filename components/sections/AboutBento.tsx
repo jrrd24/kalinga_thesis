@@ -30,7 +30,7 @@ const BENTO_ITEMS = [
     textColor: "text-body-subtext",
   },
   {
-    title: "14",
+    title: "15",
     description: "No. of Barangays",
     // Changed lg: to md: to start the span earlier
     className: "md:row-span-2",
