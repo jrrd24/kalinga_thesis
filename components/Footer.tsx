@@ -54,12 +54,11 @@ const Footer = (props: Props) => {
               ))}
             </ul>
           </FooterColumn>
-          <FooterColumn title="University">
-            <p className="text-sm md:text-base text-brand-subtext leading-snug">
-              University of Saint Louis Tuguegarao School of Education,
-              Criminology, Arts and Psychology Bartolome Street, Leonarda,
-              Tuguegarao City, Cagayan
-            </p>
+          <FooterColumn title=" University of Saint Louis Tuguegarao">
+            <div className="flex gap-1 flex-col text-sm md:text-base text-brand-subtext leading-snug ">
+              <p>School of Education, Criminology, Arts and Psychology</p>
+              <p>Bartolome Street, Leonarda, Tuguegarao City, Cagayan</p>
+            </div>
           </FooterColumn>
         </div>
 

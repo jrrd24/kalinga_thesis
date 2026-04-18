@@ -44,7 +44,11 @@ const page = () => {
         />
       </div>
 
-      <SectionWithGrid sectionWrapperClass="!pt-0" title="Meet the Researchers">
+      <SectionWithGrid
+        sectionWrapperClass="!pt-0"
+        title="Meet the Researchers"
+        gridClass="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+      >
         {researchersData.map((researcher, index) => (
           <ProfileCard key={index} {...researcher} />
         ))}

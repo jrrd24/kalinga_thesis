@@ -1,4 +1,5 @@
 "use client";
+import ArticleCard from "@/components/cards/ArticleCard";
 import { Book, Coins, Map, MapPin, Users } from "lucide-react";
 
 const PopulationTable = () => {
@@ -270,13 +271,19 @@ export const aboutData = [
     label: "Tourist Attraction",
     title: "Tourist Attraction and Place of Interest",
     content: (
-      <ul className=" list-disc pl-6 list-outside">
-        <li>
-          The Elephant Hill is located at Sitio Greenhills, San Pedro, Rizal,
-          Kalinga
-        </li>
-        <li>Man-Made Lagoon located at Liwan West, Rizal, Kaling</li>
-      </ul>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <ArticleCard
+          imageUrl="/assets/tourist-1.jpg"
+          title="Elephant Hill"
+          description="Sitio Greenhills, San Pedro, Rizal,
+            Kalinga"
+        />
+        <ArticleCard
+          imageUrl="/assets/tourist-2.jpg"
+          title="Man-Made Lagoon"
+          description="Liwan West, Rizal, Kalinga"
+        />
+      </div>
     ),
     Icon: MapPin,
   },

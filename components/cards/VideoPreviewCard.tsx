@@ -9,13 +9,13 @@ export const VideoPreviewCard = ({
   thumbnailUrl,
 }: {
   title: string;
-  description: string;
+  description?: string;
   link: string;
   duration?: string;
   thumbnailUrl?: string;
 }) => {
   return (
-    <div className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:shadow-xl">
+    <div className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:shadow-xl hover:shadow-brand-secondary/30 duration-300  ">
       {/* Thumbnail Section */}
       <div className="relative aspect-video w-full overflow-hidden">
         {thumbnailUrl ? (

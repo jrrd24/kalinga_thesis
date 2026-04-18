@@ -3,10 +3,10 @@ import { Calendar, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 interface ArticleCardProps {
-  title: string;
-  description: string;
-  tags: string[];
-  link: string;
+  title?: string;
+  description?: string;
+  tags?: string[];
+  link?: string;
   date?: string;
   imageUrl?: string;
 }
@@ -42,42 +42,44 @@ const ArticleCard = ({
       {/* Content Section */}
       <div className="flex flex-col grow p-6">
         {/* Badge & Date */}
-        <div className="flex items-center gap-2 mb-4">
-          {tags.map((tag, index) => (
-            <span
-              key={index}
-              className="rounded-full bg-[#f0f4e1] px-4 py-1 text-sm font-medium text-brand"
-            >
-              {tag}
-            </span>
-          ))}
-          {/* {date && (
-            <div className="flex items-center gap-1.5 text-sm text-gray-500 font-medium">
-              <Calendar size={16} className="text-brand" />
-              <span>{date}</span>
-            </div>
-          )} */}
-        </div>
+        {tags && (
+          <div className="flex items-center gap-2 mb-4">
+            {tags?.map((tag, index) => (
+              <span
+                key={index}
+                className="rounded-full bg-[#f0f4e1] px-4 py-1 text-sm font-medium text-brand"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
 
         {/* Title & Description */}
         <div className="space-y-2">
-          <h3 className="text-xl line-clamp-2 font-bold leading-tight text-body-text group-hover:text-brand transition-colors">
-            {title}
-          </h3>
-          <p className="text-sm leading-relaxed text-gray-600 line-clamp-3">
-            {description}
-          </p>
+          {title && (
+            <h3 className="text-xl line-clamp-2 font-bold leading-tight text-body-text group-hover:text-brand transition-colors">
+              {title}
+            </h3>
+          )}
+          {description && (
+            <p className="text-sm leading-relaxed text-gray-600 line-clamp-3">
+              {description}
+            </p>
+          )}
         </div>
 
-        <div className="mt-auto pt-6">
-          <Link
-            href={link}
-            className="inline-flex items-center gap-2 text-base font-bold text-brand transition-all hover:gap-3"
-          >
-            Read More
-            <ArrowRight size={18} strokeWidth={2.5} />
-          </Link>
-        </div>
+        {link && (
+          <div className="mt-auto pt-6">
+            <Link
+              href={link}
+              className="inline-flex items-center gap-2 text-base font-bold text-brand transition-all hover:gap-3"
+            >
+              Read More
+              <ArrowRight size={18} strokeWidth={2.5} />
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

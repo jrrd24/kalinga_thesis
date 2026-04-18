@@ -1,7 +1,9 @@
 import ArticlesPreview from "@/components/articles/ArticlesPreview";
+import { VideoPreviewCard } from "@/components/cards/VideoPreviewCard";
 import PageHeader from "@/components/sections/PageHeader";
+import ResourcesList from "@/components/sections/ResourcesList";
 import SectionWithGrid from "@/components/sections/SectionWithGrid";
-import { resourcesData } from "@/data/resourcesData";
+import { videosData } from "@/data/resourcesData";
 
 type Props = {};
 
@@ -16,13 +18,19 @@ const page = (props: Props) => {
       </div>
 
       {/** Resources list */}
-      <SectionWithGrid sectionWrapperClass="!pt-0">
-        {resourcesData.map((item, index) => (
-          <div key={index}>{item.title}</div>
+      <SectionWithGrid
+        title="Featured Videos"
+        sectionWrapperClass="!pt-0"
+        gridClass="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
+      >
+        {videosData.map((item, index) => (
+          <VideoPreviewCard key={index} {...item} />
         ))}
       </SectionWithGrid>
 
       <ArticlesPreview />
+
+      <ResourcesList />
     </div>
   );
 };
