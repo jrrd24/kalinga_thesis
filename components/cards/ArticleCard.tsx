@@ -47,7 +47,7 @@ const ArticleCard = ({
             {tags?.map((tag, index) => (
               <span
                 key={index}
-                className="rounded-full bg-[#f0f4e1] px-4 py-1 text-sm font-medium text-brand"
+                className="rounded-full bg-gray-200 px-4 py-1 text-sm font-medium text-brand"
               >
                 {tag}
               </span>

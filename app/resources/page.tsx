@@ -3,7 +3,7 @@ import { VideoPreviewCard } from "@/components/cards/VideoPreviewCard";
 import PageHeader from "@/components/sections/PageHeader";
 import ResourcesList from "@/components/sections/ResourcesList";
 import SectionWithGrid from "@/components/sections/SectionWithGrid";
-import { videosData } from "@/data/resourcesData";
+import { VIDEOS_DATA } from "@/data/resourcesData";
 
 type Props = {};
 
@@ -23,7 +23,7 @@ const page = (props: Props) => {
         sectionWrapperClass="!pt-0"
         gridClass="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
       >
-        {videosData.map((item, index) => (
+        {VIDEOS_DATA.map((item, index) => (
           <VideoPreviewCard key={index} {...item} />
         ))}
       </SectionWithGrid>

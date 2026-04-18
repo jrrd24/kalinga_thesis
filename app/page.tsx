@@ -2,7 +2,7 @@ import React from "react";
 import FullPageHero from "./../components/sections/FullPageHero";
 import SiteOverview from "@/components/sections/SiteOverview";
 import SectionWithGrid from "@/components/sections/SectionWithGrid";
-import { videosData } from "@/data/resourcesData";
+import { VIDEOS_DATA } from "@/data/resourcesData";
 import { VideoPreviewCard } from "@/components/cards/VideoPreviewCard";
 import { articlesData } from "../data/articles/articlesData";
 import ArticleCard from "@/components/cards/ArticleCard";
@@ -38,8 +38,7 @@ const page = () => {
             presentations"
         gridClass="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
       >
-        {videosData
-          .filter((item) => item.type === "video" && item.isFeatured)
+        {VIDEOS_DATA.filter((item) => item.type === "video" && item.isFeatured)
           .sort((a, b) => b.order - a.order)
           .map((item, index) => (
             <VideoPreviewCard key={index} {...item} />
