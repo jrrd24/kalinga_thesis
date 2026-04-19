@@ -14,6 +14,7 @@ interface ButtonProps {
   href: string;
   type: string;
   showArrow?: boolean;
+  textClass?: string;
 }
 
 const FullPageHero = ({

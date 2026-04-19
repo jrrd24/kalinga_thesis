@@ -7,6 +7,7 @@ type Props = {
   href: string;
   type?: string;
   showArrow?: boolean | undefined;
+  textClass?: string;
 };
 
 const HeroButton = ({
@@ -14,6 +15,7 @@ const HeroButton = ({
   href,
   type = "solid",
   showArrow = false,
+  textClass = "",
 }: Props) => {
   return (
     <Link
@@ -25,7 +27,7 @@ const HeroButton = ({
         : "btn border-1-solid border-brand-text bg-transparent hover:bg-black/60"
     }`}
     >
-      <span className="font-base">{text}</span>
+      <span className={`${text-Class} font-base`}>{text}</span>
 
       {showArrow && (
         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

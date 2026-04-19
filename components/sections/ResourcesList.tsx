@@ -29,7 +29,7 @@ const ResourcesList = () => {
       id="article-list"
       title="Other Resources"
       topContent={
-        <div className="col-span-full mb-10 flex flex-col md:flex-row gap-6 items-center justify-start md:justify-between">
+        <div className="col-span-full mb-10 flex flex-col -mt-6 md:flex-row gap-6 items-center justify-start md:justify-between">
           {/* Search Bar */}
           <div className="relative w-full md:w-96 group">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 group-focus-within:text-brand transition-colors" />

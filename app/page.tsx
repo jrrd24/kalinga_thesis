@@ -27,6 +27,7 @@ const page = () => {
             text: "Learn More",
             href: "/about",
             type: "outline",
+            textClass: "text-white",
           },
         ]}
       />
