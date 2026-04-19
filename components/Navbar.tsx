@@ -25,7 +25,7 @@ const Navbar = () => {
   });
 
   return (
-    <nav className="sticky h-20 top-0 z-50 bg-linear-to-r from-brand to-brand-secondary shadow-sm  text-brand-text">
+    <nav className="sticky md:h-20 top-0 z-50 bg-linear-to-r from-brand to-brand-secondary shadow-sm  text-brand-text">
       <div className="navbar section-wrapper my-auto h-full">
         <div className="flex-1 flex gap-4  items-center">
           {/* MOBILE DROPDOWN */}
@@ -39,17 +39,17 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-brand rounded-box w-52 border border-brand-accent/20"
+              className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-brand rounded-box w-52 border border-brand-accent/20"
             >
               {navbarData?.sections.map((section) => (
                 <li key={section.title}>
                   <Link
                     href={section.path}
-                    className={
+                    className={`text-base ${
                       pathname === section.path
                         ? "text-brand-subtext font-bold"
                         : "text-brand-text font-bold"
-                    }
+                    } `}
                   >
                     {section.title}
                   </Link>
@@ -61,7 +61,13 @@ const Navbar = () => {
           {/* LOGO & TITLE */}
           <Link href="/" className="flex items-center gap-4">
             {navbarData?.logo ? (
-              <Image src={navbarData?.logo} alt="logo" width={50} height={50} />
+              <Image
+                src={navbarData?.logo}
+                alt="logo"
+                width={60}
+                height={60}
+                className="w-10 h-10 md:w-15 md:h-12.5 object-contain"
+              />
             ) : (
               <Triangle />
             )}

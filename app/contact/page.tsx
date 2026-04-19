@@ -64,8 +64,8 @@ const page = () => {
           <p className="text-sm md:text-base text-body-subtext">
             This thesis project, titled{" "}
             <b>
-              "The Local History and Rich Cultural Heritage of Rizal Province of
-              Kalinga"
+              "Development of Multimedia Presentation of Local History Towards
+              the Advancement of Citizenship Awareness"
             </b>
             , aims to preserve and promote the indigenous traditions, customs,
             and historical narratives of the Kalinga people. By leveraging
