@@ -8,6 +8,7 @@ type Props = {
   gridClass?: string;
   sectionWrapperClass?: string;
   children?: React.ReactNode;
+  topContent?: React.ReactNode;
   href?: string;
 };
 
@@ -18,6 +19,7 @@ const SectionWithGrid = ({
   gridClass = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
   sectionWrapperClass = "bg-body-bg",
   children,
+  topContent,
   href,
 }: Props) => {
   const sectionId = id || title?.toLowerCase().replace(/\s+/g, "-");
@@ -44,6 +46,8 @@ const SectionWithGrid = ({
             <HeroButton text="Show All" href={href} showArrow type="solid" />
           )}
         </div>
+
+        {topContent && <div>{topContent}</div>}
 
         <div className={`${gridClass} auto-rows-fr gap-6 lg:gap-8`}>
           {children}
