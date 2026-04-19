@@ -27,7 +27,7 @@ const SectionWithGrid = ({
       className={`w-full py-12 scroll-mt-20 md:py-16 ${sectionWrapperClass}`}
     >
       <div className="section-wrapper flex flex-col gap-8 md:gap-12">
-        <div className="flex justify-between w-full">
+        <div className="flex flex-col md:flex-row gap-2 justify-between w-full">
           <div className="flex flex-col items-start gap-1">
             {title && (
               <h3 className="text-2xl md:text-3xl font-bold text-brand">
@@ -45,7 +45,9 @@ const SectionWithGrid = ({
           )}
         </div>
 
-        <div className={`${gridClass} gap-6 lg:gap-8`}>{children}</div>
+        <div className={`${gridClass} auto-rows-fr gap-6 lg:gap-8`}>
+          {children}
+        </div>
       </div>
     </section>
   );
