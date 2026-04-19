@@ -51,7 +51,7 @@ const ScrollSection = ({ data }: { data: ScrollSectionProps[] }) => {
 
   return (
     <div className="bg-body-bg-alt">
-      <div className="section-wrapper w-full flex flex-col md:flex-row gap-12">
+      <div className="section-wrapper w-full flex flex-col md:flex-row gap-12 mb-60">
         {/* LEFT SIDE: Sticky Navigation */}
         <aside className="md:w-1/4 h-fit md:sticky md:top-32 py-16 mt-16 mb-60 border-l border-body-subtext/15 hidden md:block">
           <nav className="flex flex-col gap-6 relative">
