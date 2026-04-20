@@ -62,7 +62,7 @@ const ResourcesList = () => {
                 <button
                   key={cat}
                   onClick={() => setSelectedType(cat)}
-                  className={`flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold border transition-all duration-300 ${
+                  className={`flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold border transition-all duration-300 cursor-pointer ${
                     isActive ? activeClass : inactiveClass
                   }`}
                 >

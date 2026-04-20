@@ -127,4 +127,17 @@ export const OTHER_RESOURCES = [
     tags: ["PPT (Materials)"],
     type: "learning-material",
   },
+  {
+    title:
+      "Kalinga peace advocates seek permanent solution to boundary dispute",
+    link: "https://pia.gov.ph/news/kalinga-peace-advocates-seek-permanent-solution-to-boundary-dispute/#:~:text=The%20boundary%20was%20established%20on,nga%20ili%2C%E2%80%9D%20Abbacan%20said",
+    tags: ["Current Events", "News"],
+    type: "article",
+  },
+  {
+    title: "Tribal wars and bodong in the Cordillera",
+    link: "https://philippinerevolution.nu/1998-2005/cgi_bin/abshow/abshowba.htm?year=2003;month=10;day=07;edition=eng;article=07",
+    tags: ["Current Events", "News"],
+    type: "article",
+  },
 ];
