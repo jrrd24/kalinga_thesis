@@ -1,7 +1,7 @@
 export const researchersData = [
   {
     id: 1,
-    name: "JOHN CARANGUIAN",
+    name: "MELENCIO CARANGUIAN",
     role: "Group Leader",
     specialization:
       "Economics, Trends, and Issues in the Applied Social Science, History, and Socio-Cultural Anthropology",
